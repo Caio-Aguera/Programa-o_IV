@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="icon" href="icon.gif" type="image/x-icon">
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 
+0;
+    background-color: #b1b0b0;
+    
+    
+   
+}
+header {
+    background-color: darkgreen;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    
+}
+header h1 {
+    margin: 0;
+    color: #333;
+}
+
+
+
+span{
+    padding-left: 10px;
+}
+
+
+.one {
+    position: relative;
+    color:White;
+    font-size: 30px;
+    padding-right: 300px;
+}
+
+.football-logo .empresa {
+    position: absolute; 
+    top: 10px; 
+    
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #dfdcdc;
+    overflow: hidden;
+}
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+nav ul li a {
+    text-decoration: none !important;
+    color: rgb(51, 51, 51);
+    display: block;
+    padding: 10px;
+}
+nav ul li a:hover {
+    background-color: #cdcaca;
+    transition: 1s;
+}
+
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  
+}
+
+.carousel-images {
+  display: flex;
+  
+}
+
+.carousel-images img {
+  width: 100%;
+  transition: transform 0.1s ease;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+h2{
+  padding: 30px;
+}
+
+.icon{
+  width: 30px;
+  height: 30px;
+  
+
+}
+
+.news-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 20px; 
+    align-items: center; 
+  }
+
+  .image-container img {
+    width: 100%; 
+    height: auto; 
+  }
+
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 200px;
+  
+  }
+
+  .video-container video {
+    width: 100%;
+    
+  }
+
+  .results-container {
+  display: flex;
+}
+
+.results-box {
+  flex: 1;
+  margin-right: 20px;
+  padding-left: 100px;
+  
+}
+
+.results-box:last-child {
+  margin-right: 0;
+}
+
+.team-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+h2{
+  text-align: center;
+}
+
+h3{
+  text-align: left;
+  padding-right: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 85%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.footer-wrapper {
+    background-color: #e4e4e4;
+    padding: 20px;
+    min-height: 200px;
+    width: 100%;
+    margin-top: 20px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-wrapper hr:last-child {
+width: 50px;
+}
+
+
+.footer-section {
+    width: calc(20% - 15px);
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.footer-text{
+    text-align: center;
+}
+
+.payment-logos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.payment-logos img {
+    width: 95px;
+    height: 45px;
+    margin-right: 5px;
+}
+.footer-section:not(:last-child) {
+    margin-right: 15px;
+}
+
+.footer-section:nth-last-child(-n + 2) img {
+    width: 25px;
+    height: 25px;
+}
+.footer-section img.large-icon {
+    width: 150px;
+    height: 150px;
+}
+.footer-section:nth-last-child(-n + 2) span {
+    margin-left: 5px;
+}
+
+.payment-logos img:last-child {
+    margin-right: 0;
+}
+
+.social-media div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.social-media img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.social-media span {
+    margin-left: 5px;
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 2%;
+    }
+    .login-wrapper {
+        width: 95%;
+    }
+    .footer-section {
+        width: calc(50% - 10px);
+    }
+}
+@media only screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px 1%;
+    }
+    .login-wrapper {
+        width: 100%;
+        max-width: none;
+    }
+    .footer-section {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+
+}   
+  
+
+ 
+
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<header>
+    <div class="one football-logo">
+        <img src="one-logo.png" alt="one-logo Logo" width="55px" height="55px">
+        <span class="empresa">One Football</span>
+    </div>
+
+    <nav>
+      <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="times.html">Times</a></li>
+          <li><a href="campeonatos.html">Campeonatos</a></li>
+          <li><a href="tabela.html">Tabela</a></li>
+          
+      </ul>
+  </nav>
+
+</header> <br>
+
+<div class="carousel">
+  <div class="carousel-images">
+    <img src="carrossel01.jpg" alt="Imagem 1">
+    <img src="carrossel02.jpg" alt="Imagem 2">
+    <img src="carrossel03.jpg" alt="Imagem 3">
+  </div>
+  <button class="prev-btn">&#10094;</button>
+  <button class="next-btn">&#10095;</button>
+</div>
+
+<script>
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  const images = document.querySelector('.carousel-images');
+
+  let counter = 0;
+  const totalImages = document.querySelectorAll('.carousel-images img').length;
+
+  nextBtn.addEventListener('click', () => {
+    counter++;
+    carousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    counter--;
+    carousel();
+  });
+
+  function carousel() {
+    if (counter === totalImages) {
+      counter = 0;
+    } else if (counter < 0) {
+      counter = totalImages - 1;
+    }
+    images.style.transform = `translateX(${-counter * 100}%)`;
+  }
+
+  
+  let autoplayInterval;
+
+  function startAutoplay() {
+    autoplayInterval = setInterval(() => {
+      counter++;
+      carousel();
+    }, 3000); 
+  }
+
+  function stopAutoplay() {
+    clearInterval(autoplayInterval);
+  }
+
+  startAutoplay(); 
+
+  
+  const carouselContainer = document.querySelector('.carousel');
+  carouselContainer.addEventListener('mouseenter', stopAutoplay);
+  carouselContainer.addEventListener('mouseleave', startAutoplay);
+</script>
+
+<section class="news-section">
+  <h2>Dudu dá mais um passo na sua recuperação!</h2>
+  <div class="news-content">
+    <img src="fut01.jpg" style="height: 350px; width: 600px;" alt="Imagem do jogador">
+    <p>O atacante Dudu está avançando cada vez mais no retorno aos gramados pelo Palmeiras. A recuperação do atleta segue dia a dia após cirurgia no joelho, e o jogador segue sua rotina intensa de treinamentos, buscando retornar o mais rápido possível. O camisa sete está machucado desde o dia 27 de agosto de 2023, quando lesionou o menisco e rompeu o ligamento cruzado anterior do joelho direito. Desde então, passou por cirurgia e vem recebendo um tratamento especial para que volte 100%.
+    Dudu está progredindo cada vez mais e aos poucos passando por partes de transição, treinos em campo, treinos com bola, etc. Mas, apesar do avanço significativo, o atleta ainda não está integrado ao elenco e segue tratamento separado.
+      Com 32 anos de idade, Dudu luta não apenas com a lesão, mas também existe todo um esquema em cima de sua forma física, para que nada atrapalhe sua volta, cada etapa é crucial para a recuperação total do atleta.
+      
+      O prazo inicial para Dudu voltar era de nove a 12 meses, entretanto, com o avanço do tratamento, o jogador pode retornar entre maio e junho. O atleta possui 443 jogos com a camisa do Palmeiras, com 88 gols e 12 títulos ganhos com o clube, o que o fez o maior campeão da história do Palestra, empatado com Ademir da Guia e Junqueira.
+      
+      Entretanto, o atacante não quer parar por aí e busca ainda mais números nessa jornada. Dudu será crucial para as competições que virão ao decorrer do ano, por isso, toda a calma para a sua volta é importante. Tratar da lesão da maneira correta é a prioridade do departamento médico, e só liberar o atleta quando ele estiver, de fato, inteiro para retornar aos gramados.</p>
+  </div>
+</section>
+
+<section class="video-section">
+  <h2>Vídeo em Destaque:</h2>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vCW5iairfks?si=YIVHKDvEDM6XrUXz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fVu5Gvo9Pb0?si=3LEG_52mw5eJixOV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</section>
+<section class="results-section">
+  <h2>Resultados e Próximos Jogos</h2>
+  <div class="results-container">
+    <div class="results-box">
+      <h3>Últimos Resultados:</h3>
+      <ul class="results-list">
+        
+          <img src="icon01.gif" alt="Ícone do Palmeiras" class="team-icon"> Palmeiras vs
+          <img src="icon02.gif" alt="Ícone do Corinthians" class="team-icon"> Corinthians
+          <p>Data: 09/02/2024</p>
+          <p>Resultado: Palmeiras 3 - 2 Corinthians</p><br>
+        
+        
+          <img src="icon03.gif" alt="Ícone do São Paulo" class="team-icon"> São Paulo vs
+          <img src="icon04.gif" alt="Ícone do Santos" class="team-icon"> Santos
+          <p>Data: 11/02/2024</p>
+          <p>Resultado: São Paulo 1 - 0 Santos</p><br>
+        
+        
+          <img src="icon05.gif" alt="Ícone do Flamengo" class="team-icon"> Flamengo vs
+          <img src="icon06.gif" alt="Ícone do Vasco" class="team-icon"> Vasco
+          <p>Data: 13/02/2024</p>
+          <p>Resultado: Flamengo 5 - 2 Vasco</p><br>
+        
+      </ul>
+    </div>
+    <div class="results-box">
+      <h3>Próximos Jogos:</h3>
+      <ul class="results-list">
+        
+          <img src="icon03.gif" alt="Ícone do São Paulo" class="team-icon"> São Paulo vs
+          <img src="icon08.gif" alt="ícone do Internacional" class="team-icon"> Internacional
+          <p>Data: 04/03/2024</p><br>
+        
+        
+          <img src="icon01.gif" alt="Ícone do Palmeiras" class="team-icon"> Palmeiras vs.
+          <img src="icon07.gif" alt="Ícone do Fluminense" class="team-icon"> Fluminense
+          <p>Data: 06/03/2024</p><br>
+        
+        
+          <img src="icon05.gif" alt="Ícone do Flamengo" class="team-icon"> Flamengo vs
+          <img src="icon09.gif" alt="Ícone do Atlético-MG" class="team-icon"> Atlético-MG
+          <p>Data: 09/03/2024</p><br>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="footer-wrapper">
+  <div class="footer">
+      <div class="footer-section">         
+          <h3>ATENDIMENTO AO CLIENTE</h3>
+          <div>
+              <p>Central de Ajuda</p>
+              <p>Como usar o One Football</p>
+              <p>Download Gratuito no Google Play</p>
+              <p>Fale Conosco</p>
+              <p>Feedback</p>
+              <p>Preferências de Cookies</p>
+              <p>Suporte</p>
+            
+          </div>
+      </div>
+
+      <div class="footer-section">
+          <h3>SIGA-NOS</h3>
+          <div class="social-media">
+              <div>
+                  <img src="iconinstagram-ptbr.png" alt="Instagram">
+                  <span>Instagram</span>
+              </div>
+              <div>
+                  <img src="icontiktok-ptbr.png" alt="TikTok">
+                  <span>TikTok</span>
+              </div>
+              <div>
+                  <img src="icontwitter-ptbr.png" alt="Twitter">
+                  <span>Twitter</span>
+              </div>
+              <div>
+                  <img src="iconfacebook-ptbr.png" alt="Facebook">
+                  <span>Facebook</span>      
+              </div>
+
+              <br> <br>
+
+              <img src="icon.gif" style="width: 50px;  height: 50px;">
+                 
+          </div>
+      </div>
+
+      <div class="footer-section">
+          <h3>DOWNLOAD DO APP</h3>
+          <img src="Qr Code.png" alt="Aproxime o celular no QR Code" style="width: 150px; height: 150px; display: block; margin: left 10px;"> <br> <br>
+
+          <div>
+              <img src="googleplay.png" alt="Ícone sobre pinturas" style="width: 35px; height: 35px; margin-right: 10px; vertical-align: middle;">
+              <span style="vertical-align: middle;"><strong>Google Play</strong></span> 
+          </div> <br>
+
+          <div>
+              <img src="apple.png" alt="Ícone sobre pinturas" style="width: 35px; height: 35px; margin-right: 10px; vertical-align: middle;">
+              <span style="vertical-align: middle;"><strong>App Store</strong></span>
+          </div>
+     
+      </div>
+
+      
+      
+      
+      
+
+      <div class="footer-section">
+          <h3>SOBRE O ONE FOOTBALL</h3>
+         
+          <div>
+              <p>Sobre Nós</p>
+              <p>Termos de Uso</p>
+              <p>Políticas do One Footeball</p>
+              <p>Política de Privacidade</p>
+              <p>Programa de Afiliados do One Footeball</p>
+              <p>One Football Blog</p>
+              <p>Imprensa</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="footer-text">
+
+  <p>© 2024 One Football. Todos os direitos reservados.</p>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
+
+     

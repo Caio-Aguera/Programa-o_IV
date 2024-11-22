@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.gif" type="image/x-icon">
+    <title>Times Brasileiros</title>
+    <style>
+        header {
+            background-color: darkgreen;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        header h1 {
+            margin: 0;
+            color: #333;
+        }
+        span {
+            padding-left: 10px;
+        }
+        .one {
+            position: relative; 
+            padding-right: 198px;
+            color: white;
+            font-size: 30px;
+        }
+        .football-logo .empresa {
+            position: absolute; 
+            top: 10px; 
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #dfdcdc;
+            overflow: hidden;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 1000px;
+        }
+        nav ul li a {
+            text-decoration: none !important;
+            color: rgb(51, 51, 51);
+            display: block;
+            padding: 10px;
+        }
+        nav ul li a:hover {
+            background-color: #cdcaca;
+            transition: 0.5s;
+        }
+        .formulario {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+        }
+      
+        h2 {
+            text-align: center;
+        }
+      
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box; 
+        }
+       
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+        #info-time {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 85%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.footer-wrapper {
+    background-color: #e4e4e4;
+    padding: 20px;
+    min-height: 200px;
+    width: 100%;
+    margin-top: 20px;
+    max-width: 100%; /* Alterado para 100% */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-wrapper hr:last-child {
+width: 50px;
+}
+
+
+.footer-section {
+    width: calc(20% - 15px);
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.footer-text{
+    text-align: center;
+}
+
+.payment-logos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.payment-logos img {
+    width: 95px;
+    height: 45px;
+    margin-right: 5px;
+}
+.footer-section:not(:last-child) {
+    margin-right: 15px;
+}
+
+.footer-section:nth-last-child(-n + 2) img {
+    width: 25px;
+    height: 25px;
+}
+.footer-section img.large-icon {
+    width: 150px;
+    height: 150px;
+}
+.footer-section:nth-last-child(-n + 2) span {
+    margin-left: 5px;
+}
+
+.payment-logos img:last-child {
+    margin-right: 0;
+}
+
+.social-media div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.social-media img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.social-media span {
+    margin-left: 5px;
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 2%;
+    }
+    .login-wrapper {
+        width: 95%;
+    }
+    .footer-section {
+        width: calc(50% - 10px);
+    }
+}
+@media only screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px 1%;
+    }
+    .login-wrapper {
+        width: 100%;
+        max-width: none;
+    }
+    .footer-section {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+
+}   
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="one football-logo">
+        <img src="one-logo.png" alt="one-logo Logo" width="55px" height="55px">
+        <span class="empresa">One Football</span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Voltar</a></li>
+        </ul>
+    </nav>
+</header> <br>
+
+<div class="formulario">
+    <h2>Selecione o seu time favorito:</h2>
+  
+    <form id="formulario-time" action="/submit_time" method="post">
+      <label for="time">Time:</label>
+      <select id="time" name="time">
+        <option value="Flamengo">Flamengo</option>
+        <option value="São Paulo">São Paulo</option>
+        <option value="Palmeiras">Palmeiras</option>
+        <option value="Santos">Santos</option>
+        <option value="Corinthians">Corinthians</option>
+        <option value="Grêmio">Grêmio</option>
+        <option value="Internacional">Internacional</option>
+        <option value="Atlético Mineiro">Atlético Mineiro</option>
+        <option value="Cruzeiro">Cruzeiro</option>
+        <option value="Botafogo">Botafogo</option>
+        <option value="Fluminense">Fluminense</option>
+        <option value="Vasco">Vasco</option>
+        <option value="Atlético Paranaense">Atlético Paranaense</option>
+        <option value="Coritiba">Coritiba</option>
+        <option value="Sport">Sport</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Vitória">Vitória</option>
+        <option value="Fortaleza">Fortaleza</option>
+        <option value="Ceará">Ceará</option>
+        <option value="Chapecoense">Chapecoense</option>
+        <option value="Red Bull Bragantino">Red Bull Bragantino</option>
+      </select>
+      <br><br>
+      <input type="submit" value="Enviar">
+    </form>
+</div>
+
+<div id="info-time" style="display:none;"></div>
+
+<script>
+   
+   var timesData = {
+    "Flamengo": {
+        "Estado": "Rio de Janeiro",
+        "Ano de Fundação": 1895,
+        "N° de Torcedores": "Mais de 40 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa Libertadores", "Copa do Brasil"]
+    },
+    "São Paulo": {
+        "Estado": "São Paulo",
+        "Ano de Fundação": 1930,
+        "N° de Torcedores": "Mais de 16 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa Libertadores", "Copa do Mundo de Clubes da FIFA"]
+    },
+    "Palmeiras": {
+        "Estado": "São Paulo",
+        "Ano de Fundação": 1914,
+        "N° de Torcedores": "Mais de 18 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa Libertadores", "Copa do Brasil"]
+    },
+    "Santos": {
+        "Estado": "São Paulo",
+        "Ano de Fundação": 1912,
+        "N° de Torcedores": "Mais de 5 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa Libertadores", "Copa do Brasil"]
+    },
+    "Corinthians": {
+        "Estado": "São Paulo",
+        "Ano de Fundação": 1910,
+        "N° de Torcedores": "Mais de 30 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa Libertadores", "Copa do Brasil"]
+    },
+    "Grêmio": {
+        "Estado": "Rio Grande do Sul",
+        "Ano de Fundação": 1903,
+        "N° de Torcedores": "Mais de 8 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa Libertadores", "Copa do Brasil"]
+    },
+    "Internacional": {
+        "Estado": "Rio Grande do Sul",
+        "Ano de Fundação": 1909,
+        "N° de Torcedores": "Mais de 6 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa Libertadores", "Copa do Brasil"]
+    },
+    "Atlético Mineiro": {
+        "Estado": "Minas Gerais",
+        "Ano de Fundação": 1908,
+        "N° de Torcedores": "Mais de 8 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa Libertadores", "Copa do Brasil"]
+    },
+    "Cruzeiro": {
+        "Estado": "Minas Gerais",
+        "Ano de Fundação": 1921,
+        "N° de Torcedores": "Mais de 8 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa Libertadores", "Copa do Brasil"]
+    },
+    
+    "Botafogo": {
+        "Estado": "Rio de Janeiro",
+        "Ano de Fundação": 1904,
+        "N° de Torcedores": "Mais de 3 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa Libertadores", "Copa do Brasil"]
+    },
+    "Fluminense": {
+        "Estado": "Rio de Janeiro",
+        "Ano de Fundação": 1902,
+        "N° de Torcedores": "Mais de 3 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa Libertadores", "Copa do Brasil"]
+    },
+    "Vasco": {
+        "Estado": "Rio de Janeiro",
+        "Ano de Fundação": 1898,
+        "N° de Torcedores": "Mais de 5 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa Libertadores", "Copa do Brasil"]
+    },
+    "Atlético Paranaense": {
+        "Estado": "Paraná",
+        "Ano de Fundação": 1924,
+        "N° de Torcedores": "Mais de 2 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa do Brasil"]
+    },
+    "Coritiba": {
+        "Estado": "Paraná",
+        "Ano de Fundação": 1909,
+        "N° de Torcedores": "Mais de 3 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa do Brasil"]
+    },
+    "Sport": {
+        "Estado": "Pernambuco",
+        "Ano de Fundação": 1905,
+        "N° de Torcedores": "Mais de 3 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa do Brasil"]
+    },
+    "Bahia": {
+        "Estado": "Bahia",
+        "Ano de Fundação": 1931,
+        "N° de Torcedores": "Mais de 2 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa do Nordeste"]
+    },
+    "Vitória": {
+        "Estado": "Bahia",
+        "Ano de Fundação": 1899,
+        "N° de Torcedores": "Mais de 1 milhão",
+        "Títulos": ["Copa do Nordeste"]
+    },
+    "Fortaleza": {
+        "Estado": "Ceará",
+        "Ano de Fundação": 1918,
+        "N° de Torcedores": "Mais de 2 milhões",
+        "Títulos": ["Campeonato Brasileiro", "Copa do Nordeste"]
+    },
+    "Ceará": {
+        "Estado": "Ceará",
+        "Ano de Fundação": 1914,
+        "N° de Torcedores": "Mais de 1 milhão",
+        "Títulos": ["Copa do Nordeste"]
+    },
+    "Chapecoense": {
+        "Estado": "Santa Catarina",
+        "Ano de Fundação": 1973,
+        "N° de Torcedores": "Mais de 1 milhão",
+        "Títulos": ["Campeonato Catarinense"]
+    },
+    "Red Bull Bragantino": {
+        "Estado": "São Paulo",
+        "Ano de Fundação": 1928,
+        "N° de Torcedores": "Mais de 500 mil",
+        "Títulos": ["Campeonato Paulista, Paulistão"]
+    },
+    "Atlético Goianiense": {
+        "Estado": "Goiás",
+        "Ano de Fundação": 1937,
+        "N° de Torcedores": "Mais de 500 mil",
+        "Títulos": ["CAMPEONATO GOIANO, COPA GOIÁS"]
+    },
+    "Goiás": {
+        "Estado": "Goiás",
+        "Ano de Fundação": 1943,
+        "N° de Torcedores": "Mais de 500 mil",
+        "Títulos": ["Campeonato Goiano, Campeonato Brasileiro Série B, Copa Verde"]
+    },
+    "América Mineiro": {
+        "Estado": "Minas Gerais",
+        "Ano de Fundação": 1912,
+        "N° de Torcedores": "Mais de 500 mil",
+        "Títulos": ["Campeonato Brasileiro , Série B , Série C"]
+    },
+    "Athletico Paranaense": {
+        "Estado": "Paraná",
+        "Ano de Fundação": 1924,
+        "N° de Torcedores": "Mais de 500 mil",
+        "Títulos": ["Copa Sul-Americana , Copa Brasil, Campeonato Brasileiro "]
+    }
+
+};
+
+    document.getElementById("formulario-time").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        var selectedTime = document.getElementById("time").value; 
+
+       
+        var timeData = timesData[selectedTime];
+
+       
+        var infoString = "<h3>Informações sobre o time selecionado (" + selectedTime + "):</h3>";
+        infoString += "<p><strong>Estado:</strong> " + timeData["Estado"] + "</p>";
+        infoString += "<p><strong>Ano de Fundação:</strong> " + timeData["Ano de Fundação"] + "</p>";
+        infoString += "<p><strong>N° de Torcedores:</strong> " + timeData["N° de Torcedores"] + "</p>";
+        infoString += "<p><strong>Títulos:</strong> " + timeData["Títulos"].join(", ") + "</p>";
+
+    
+        var infoDiv = document.getElementById("info-time");
+        infoDiv.innerHTML = infoString;
+        infoDiv.style.display = "block"; 
+    });
+</script>
+<div class="footer-wrapper">
+    <div class="footer">
+        <div class="footer-section">         
+            <h3>ATENDIMENTO AO CLIENTE</h3>
+            <div>
+                <p>Central de Ajuda</p>
+                <p>Como usar o One Football</p>
+                <p>Download Gratuito no Google Play</p>
+                <p>Fale Conosco</p>
+                <p>Feedback</p>
+                <p>Preferências de Cookies</p>
+                <p>Suporte</p>
+              
+            </div>
+        </div>
+  
+        <div class="footer-section">
+            <h3>SIGA-NOS</h3>
+            <div class="social-media">
+                <div>
+                    <img src="iconinstagram-ptbr.png" alt="Instagram">
+                    <span>Instagram</span>
+                </div>
+                <div>
+                    <img src="icontiktok-ptbr.png" alt="TikTok">
+                    <span>TikTok</span>
+                </div>
+                <div>
+                    <img src="icontwitter-ptbr.png" alt="Twitter">
+                    <span>Twitter</span>
+                </div>
+                <div>
+                    <img src="iconfacebook-ptbr.png" alt="Facebook">
+                    <span>Facebook</span>      
+                </div>
+  
+                <br> <br>
+  
+                <img src="icon.gif" style="width: 50px;  height: 50px;">
+                   
+            </div>
+        </div>
+  
+        <div class="footer-section">
+            <h3>DOWNLOAD DO APP</h3>
+            <img src="Qr Code.png" alt="Aproxime o celular no QR Code" style="width: 150px; height: 150px; display: block; margin: left 10px;"> <br> <br>
+  
+            <div>
+                <img src="googleplay.png" alt="Ícone sobre pinturas" style="width: 35px; height: 35px; margin-right: 10px; vertical-align: middle;">
+                <span style="vertical-align: middle;"><strong>Google Play</strong></span> 
+            </div> <br>
+  
+            <div>
+                <img src="apple.png" alt="Ícone sobre pinturas" style="width: 35px; height: 35px; margin-right: 10px; vertical-align: middle;">
+                <span style="vertical-align: middle;"><strong>App Store</strong></span>
+            </div>
+       
+        </div>
+  
+        
+        
+        
+        
+  
+        <div class="footer-section">
+            <h3>SOBRE O ONE FOOTBALL</h3>
+           
+            <div>
+                <p>Sobre Nós</p>
+                <p>Termos de Uso</p>
+                <p>Políticas do One Footeball</p>
+                <p>Política de Privacidade</p>
+                <p>Programa de Afiliados do One Footeball</p>
+                <p>One Football Blog</p>
+                <p>Imprensa</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  
+  <div class="footer-text">
+  
+    <p>© 2024 One Football. Todos os direitos reservados.</p>
+  </div>
+  </div>
+  
+  
+  
+  
+  </body>
+  </html>
+  
+       
+</body>
+</html>
+
+
+
+</body>
+</html>

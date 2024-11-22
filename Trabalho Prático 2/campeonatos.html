@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.gif" type="image/x-icon">
+    <title>Times Brasileiros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: darkgreen;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        header h1 {
+            margin: 0;
+            color: #333;
+        }
+        span {
+            padding-left: 10px;
+        }
+        .one {
+            position: relative; 
+            padding-right: 198px;
+            color: white;
+            font-size: 30px;
+        }
+        .football-logo .empresa {
+            position: absolute; 
+            top: 10px; 
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #dfdcdc;
+            overflow: hidden;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 1000px;
+        }
+        nav ul li a {
+            text-decoration: none !important;
+            color: rgb(51, 51, 51);
+            display: block;
+            padding: 10px;
+        }
+        nav ul li a:hover {
+            background-color: #cdcaca;
+            transition: 0.5s;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #formularioCampeonato {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #informacoesCampeonato {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="one football-logo">
+        <img src="one-logo.png" alt="one-logo Logo" width="55px" height="55px">
+        <span class="empresa">One Football</span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Voltar</a></li>
+        </ul>
+    </nav>
+</header> <br>
+
+    <h1>Escolha um Campeonato Brasileiro:</h1>
+    <form id="formularioCampeonato">
+        <label for="campeonato">Selecione o Campeonato:</label>
+        <select id="campeonato" name="campeonato">
+            <option value="brasileirao">Campeonato Brasileiro (Série A)</option>
+            <option value="copaDoBrasil">Copa do Brasil</option>
+            <option value="libertadores">Copa Libertadores da América</option>
+            <option value="copaNordeste">Copa do Nordeste</option>
+            <option value="brasileiraoFeminino">Campeonato Brasileiro Feminino</option>
+        </select>
+        <button type="submit">Ver Informações</button>
+    </form>
+
+    <div id="informacoesCampeonato">
+        <h2>Informações do Campeonato</h2>
+        <p id="localizacao"></p>
+        <p id="timesParticipantes"></p>
+        <p id="premiacoes"></p>
+    </div>
+
+    <script>
+        const formulario = document.getElementById('formularioCampeonato');
+        const informacoesCampeonato = document.getElementById('informacoesCampeonato');
+        const localizacao = document.getElementById('localizacao');
+        const timesParticipantes = document.getElementById('timesParticipantes');
+        const premiacoes = document.getElementById('premiacoes');
+
+        formulario.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const campeonatoSelecionado = formulario.campeonato.value;
+
+            switch (campeonatoSelecionado) {
+                case 'brasileirao':
+                    localizacao.textContent = 'Brasil';
+                    timesParticipantes.textContent = '20 times participantes';
+                    premiacoes.textContent = 'Prêmio total de R$ 100 milhões';
+                    break;
+                case 'copaDoBrasil':
+                    localizacao.textContent = 'Brasil';
+                    timesParticipantes.textContent = 'Mais de 90 times participantes';
+                    premiacoes.textContent = 'Prêmio total de R$ 70 milhões';
+                    break;
+                case 'libertadores':
+                    localizacao.textContent = 'América do Sul';
+                    timesParticipantes.textContent = 'Times de toda a América do Sul';
+                    premiacoes.textContent = 'Prêmio total de US$ 25 milhões';
+                    break;
+                case 'copaNordeste':
+                    localizacao.textContent = 'Região Nordeste do Brasil';
+                    timesParticipantes.textContent = '16 times participantes';
+                    premiacoes.textContent = 'Prêmio total de R$ 20 milhões';
+                    break;
+                case 'brasileiraoFeminino':
+                    localizacao.textContent = 'Brasil';
+                    timesParticipantes.textContent = '16 times participantes';
+                    premiacoes.textContent = 'Prêmio total de R$ 3 milhões';
+                    break;
+            }
+
+            informacoesCampeonato.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
+
+
+ 

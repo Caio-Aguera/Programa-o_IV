@@ -1,0 +1,275 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b1b0b0;
+   
+}
+header {
+    background-color: darkgreen;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+header h1 {
+    margin: 0;
+    color: #333;
+}
+
+
+
+span{
+    padding-left: 10px;
+}
+
+
+.one {
+    position: relative; 
+   padding-right: 198px;
+}
+
+.football-logo .empresa {
+    position: absolute; 
+    top: 10px; 
+}
+
+
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #dfdcdc;
+    overflow: hidden;
+}
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+nav ul li a {
+    text-decoration: none !important;
+    color: rgb(51, 51, 51);
+    display: block;
+    padding: 10px;
+}
+nav ul li a:hover {
+    background-color: #cdcaca;
+    transition: 0.5s;
+}
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+.cadastro-container {
+    background-color: #fff;
+    padding: 20px 110px;
+    border-radius: 8px;
+    max-width: 450px;
+    margin: auto;
+    text-align: center;
+  
+}
+.cadastro-container h2 {
+    text-align: left;
+    margin-top: 0;
+    color: darkgreen;
+    font-weight: bold;
+    
+    
+}
+input[type="text"], input[type="number"], input[type="date"], select, textarea {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+input[type="file"] + label {
+    background-color: transparent;
+    border: 1px solid darkgreen;
+    color: darkgreen;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px;
+}
+
+input[type="file"] + label:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+input[type="file"] + label{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+input[type="email"], input[type="password"] {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.button {
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    padding: 10px 50px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    align-self: center;
+    text-decoration: none;
+}
+.button:hover {
+    background-color: darkgreen;
+}
+.empresa{
+    color: white;
+    font-size: 2em;
+}
+
+.file-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.file-container input[type="file"] + label {
+    margin-right: 20px;
+}
+.file-container span {
+    margin-top: 10px;
+}
+.cadastro-container label[for="text"] {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 85%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.footer-wrapper {
+    background-color: #e4e4e4;
+    padding: 20px;
+    min-height: 200px;
+    width: 100%;
+    margin-top: 20px;
+    max-width: 100%; /* Alterado para 100% */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-wrapper hr:last-child {
+width: 50px;
+}
+
+
+.footer-section {
+    width: calc(20% - 15px);
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.footer-text{
+    text-align: center;
+}
+
+.payment-logos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.payment-logos img {
+    width: 95px;
+    height: 45px;
+    margin-right: 5px;
+}
+.footer-section:not(:last-child) {
+    margin-right: 15px;
+}
+
+.footer-section:nth-last-child(-n + 2) img {
+    width: 25px;
+    height: 25px;
+}
+.footer-section img.large-icon {
+    width: 150px;
+    height: 150px;
+}
+.footer-section:nth-last-child(-n + 2) span {
+    margin-left: 5px;
+}
+
+.payment-logos img:last-child {
+    margin-right: 0;
+}
+
+.social-media div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.social-media img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.social-media span {
+    margin-left: 5px;
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 2%;
+    }
+    .login-wrapper {
+        width: 95%;
+    }
+    .footer-section {
+        width: calc(50% - 10px);
+    }
+}
+@media only screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px 1%;
+    }
+    .login-wrapper {
+        width: 100%;
+        max-width: none;
+    }
+    .footer-section {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+
+}   

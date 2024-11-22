@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.gif" type="image/x-icon">
+    <title>Tabela do Brasileirão</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 90%;
+            max-width: 800px;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        thead {
+            background-color: #333;
+            color: #fff;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        header {
+    background-color: darkgreen;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+header h1 {
+    margin: 0;
+    color: #333;
+}
+
+
+
+span{
+    padding-left: 10px;
+}
+
+
+.one {
+    position: relative; 
+   padding-right: 198px;
+   color: white;
+   font-size: 30px;
+}
+
+.football-logo .empresa {
+    position: absolute; 
+    top: 10px; 
+}
+
+
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #dfdcdc;
+    overflow: hidden;
+}
+nav ul li {
+    display: inline;
+    margin-right: 1000px;
+    
+}
+nav ul li a {
+    text-decoration: none !important;
+    color: rgb(51, 51, 51);
+    display: block;
+    padding: 10px;
+}
+nav ul li a:hover {
+    background-color: #cdcaca;
+    transition: 0.5s;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 85%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.footer-wrapper {
+    background-color: #e4e4e4;
+    padding: 20px;
+    min-height: 200px;
+    width: 100%;
+    margin-top: 20px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-wrapper hr:last-child {
+width: 50px;
+}
+
+
+.footer-section {
+    width: calc(20% - 15px);
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.footer-text{
+    text-align: center;
+}
+
+.payment-logos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.payment-logos img {
+    width: 95px;
+    height: 45px;
+    margin-right: 5px;
+}
+.footer-section:not(:last-child) {
+    margin-right: 15px;
+}
+
+.footer-section:nth-last-child(-n + 2) img {
+    width: 25px;
+    height: 25px;
+}
+.footer-section img.large-icon {
+    width: 150px;
+    height: 150px;
+}
+.footer-section:nth-last-child(-n + 2) span {
+    margin-left: 5px;
+}
+
+.payment-logos img:last-child {
+    margin-right: 0;
+}
+
+.social-media div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.social-media img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.social-media span {
+    margin-left: 5px;
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 2%;
+    }
+    .login-wrapper {
+        width: 95%;
+    }
+    .footer-section {
+        width: calc(50% - 10px);
+    }
+}
+@media only screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px 1%;
+    }
+    .login-wrapper {
+        width: 100%;
+        max-width: none;
+    }
+    .footer-section {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+
+}   
+  
+
+ 
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="one football-logo">
+            <img src="one-logo.png" alt="one-logo Logo" width="55px" height="55px">
+            <span class="empresa">One Football</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Voltar</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <h1>Tabela do Brasileirão</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Posição</th>
+                <th>Time</th>
+                <th>Pontos</th>
+                <th>Jogos</th>
+                <th>Vitórias</th>
+                <th>Empates</th>
+                <th>Derrotas</th>
+                <th>Gols Pró</th>
+                <th>Gols Contra</th>
+                <th>Saldo de Gols</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>1</td>
+                <td>Flamengo</td>
+                <td>70</td>
+                <td>38</td>
+                <td>21</td>
+                <td>7</td>
+                <td>10</td>
+                <td>60</td>
+                <td>35</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Palmeiras</td>
+                <td>68</td>
+                <td>38</td>
+                <td>20</td>
+                <td>8</td>
+                <td>10</td>
+                <td>55</td>
+                <td>30</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Santos</td>
+                <td>66</td>
+                <td>38</td>
+                <td>19</td>
+                <td>9</td>
+                <td>10</td>
+                <td>50</td>
+                <td>28</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Grêmio</td>
+                <td>65</td>
+                <td>38</td>
+                <td>19</td>
+                <td>8</td>
+                <td>11</td>
+                <td>48</td>
+                <td>29</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>São Paulo</td>
+                <td>63</td>
+                <td>38</td>
+                <td>18</td>
+                <td>9</td>
+                <td>11</td>
+                <td>45</td>
+                <td>27</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Internacional</td>
+                <td>62</td>
+                <td>38</td>
+                <td>17</td>
+                <td>11</td>
+                <td>10</td>
+                <td>42</td>
+                <td>25</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Corinthians</td>
+                <td>60</td>
+                <td>38</td>
+                <td>17</td>
+                <td>9</td>
+                <td>12</td>
+                <td>40</td>
+                <td>28</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Atlético-MG</td>
+                <td>58</td>
+                <td>38</td>
+                <td>16</td>
+                <td>10</td>
+                <td>12</td>
+                <td>38</td>
+                <td>30</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Fortaleza</td>
+                <td>56</td>
+                <td>38</td>
+                <td>15</td>
+                <td>11</td>
+                <td>12</td>
+                <td>36</td>
+                <td>31</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Bahia</td>
+                <td>54</td>
+                <td>38</td>
+                <td>14</td>
+                <td>12</td>
+                <td>12</td>
+                <td>35</td>
+                <td>32</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Goiás</td>
+                <td>52</td>
+                <td>38</td>
+                <td>14</td>
+                <td>10</td>
+                <td>14</td>
+                <td>34</td>
+                <td>33</td>
+                <td>1</td>
+            </tr>
+            <!-- Adicionando mais 15 times -->
+            <tr>
+                <td>12</td>
+                <td>Fluminense</td>
+                <td>49</td>
+                <td>38</td>
+                <td>13</td>
+                <td>10</td>
+                <td>15</td>
+                <td>35</td>
+                <td>34</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Vasco</td>
+                <td>47</td>
+                <td>38</td>
+                <td>13</td>
+                <td>8</td>
+                <td>17</td>
+                <td>30</td>
+                <td>32</td>
+                <td>-2</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Botafogo</td>
+                <td>45</td>
+                <td>38</td>
+                <td>12</td>
+                <td>9</td>
+                <td>17</td>
+                <td>28</td>
+                <td>35</td>
+                <td>-7</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Atlético-GO</td>
+                <td>44</td>
+                <td>38</td>
+                <td>12</td>
+                <td>8</td>
+                <td>18</td>
+                <td>27</td>
+                <td>37</td>
+                <td>-10</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Sport</td>
+                <td>42</td>
+                <td>38</td>
+                <td>11</td>
+                <td>9</td>
+                <td>18</td>
+                <td>25</td>
+                <td>35</td>
+                <td>-10</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Coritiba</td>
+                <td>41</td>
+                <td>38</td>
+                <td>11</td>
+                <td>8</td>
+                <td>19</td>
+                <td>23</td>
+                <td>37</td>
+                <td>-14</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Bragantino</td>
+                <td>40</td>
+                <td>38</td>
+                <td>11</td>
+                <td>7</td>
+                <td>20</td>
+                <td>22</td>
+                <td>38</td>
+                <td>-16</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>América-MG</td>
+                <td>39</td>
+                <td>38</td>
+                <td>10</td>
+                <td>9</td>
+                <td>19</td>
+                <td>21</td>
+                <td>39</td>
+                <td>-18</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Cuiaba</td>
+                <td>37</td>
+                <td>38</td>
+                <td>9</td>
+                <td>10</td>
+                <td>19</td>
+                <td>20</td>
+                <td>41</td>
+                <td>-21</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer-wrapper">
+        <div class="footer">
+            <div class="footer-section">         
+                <h3>ATENDIMENTO AO CLIENTE</h3>
+                <div>
+                    <p>Central de Ajuda</p>
+                    <p>Como usar o One Football</p>
+                    <p>Download Gratuito no Google Play</p>
+                    <p>Fale Conosco</p>
+                    <p>Feedback</p>
+                    <p>Preferências de Cookies</p>
+                    <p>Suporte</p>
+                  
+                </div>
+            </div>
+      
+            <div class="footer-section">
+                <h3>SIGA-NOS</h3>
+                <div class="social-media">
+                    <div>
+                        <img src="iconinstagram-ptbr.png" alt="Instagram">
+                        <span>Instagram</span>
+                    </div>
+                    <div>
+                        <img src="icontiktok-ptbr.png" alt="TikTok">
+                        <span>TikTok</span>
+                    </div>
+                    <div>
+                        <img src="icontwitter-ptbr.png" alt="Twitter">
+                        <span>Twitter</span>
+                    </div>
+                    <div>
+                        <img src="iconfacebook-ptbr.png" alt="Facebook">
+                        <span>Facebook</span>      
+                    </div>
+      
+                    <br> <br>
+      
+                    <img src="icon.gif" style="width: 50px;  height: 50px;">
+                       
+                </div>
+            </div>
+      
+            <div class="footer-section">
+                <h3>DOWNLOAD DO APP</h3>
+                <img src="Qr Code.png" alt="Aproxime o celular no QR Code" style="width: 150px; height: 150px; display: block; margin: left 10px;"> <br> <br>
+      
+                <div>
+                    <img src="googleplay.png" alt="Ícone sobre pinturas" style="width: 35px; height: 35px; margin-right: 10px; vertical-align: middle;">
+                    <span style="vertical-align: middle;"><strong>Google Play</strong></span> 
+                </div> <br>
+      
+                <div>
+                    <img src="apple.png" alt="Ícone sobre pinturas" style="width: 35px; height: 35px; margin-right: 10px; vertical-align: middle;">
+                    <span style="vertical-align: middle;"><strong>App Store</strong></span>
+                </div>
+           
+            </div>
+      
+            
+            
+            
+            
+      
+            <div class="footer-section">
+                <h3>SOBRE O ONE FOOTBALL</h3>
+               
+                <div>
+                    <p>Sobre Nós</p>
+                    <p>Termos de Uso</p>
+                    <p>Políticas do One Footeball</p>
+                    <p>Política de Privacidade</p>
+                    <p>Programa de Afiliados do One Footeball</p>
+                    <p>One Football Blog</p>
+                    <p>Imprensa</p>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+      
+      <div class="footer-text">
+      
+        <p>© 2024 One Football. Todos os direitos reservados.</p>
+      </div>
+      </div>
+      
+      
+      
+      
+      </body>
+      </html>
+      
+           
+</body>
+</html>
+
